@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings - FitMatch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="FitMatch Logo">
+                <span>FitMatch</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="bookings.html" class="active">Bookings</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <header class="page-header">
+            <h1>Manage Bookings</h1>
+            <p>Review and manage your client session requests</p>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('pending')">Pending (5)</button>
+            <button class="tab-btn" onclick="showTab('confirmed')">Confirmed (8)</button>
+            <button class="tab-btn" onclick="showTab('completed')">Completed (24)</button>
+        </div>
+
+        <!-- Pending Tab -->
+        <div id="pending" class="tab-content active">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h3>John Smith</h3>
+                    <span class="badge pending">Pending</span>
+                </div>
+                <p><strong>Date:</strong> Feb 18, 2026 at 3:00 PM</p>
+                <p><strong>Service:</strong> Yoga Session</p>
+                <p><strong>Price:</strong> $60</p>
+                <div class="btn-group">
+                    <button class="btn btn-success">Confirm</button>
+                    <button class="btn btn-danger">Decline</button>
+                </div>
+            </div>
+
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h3>Emily Chen</h3>
+                    <span class="badge pending">Pending</span>
+                </div>
+                <p><strong>Date:</strong> Feb 19, 2026 at 5:00 PM</p>
+                <p><strong>Service:</strong> HIIT Training</p>
+                <p><strong>Price:</strong> $75</p>
+                <div class="btn-group">
+                    <button class="btn btn-success">Confirm</button>
+                    <button class="btn btn-danger">Decline</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmed Tab -->
+        <div id="confirmed" class="tab-content">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h3>Sarah Johnson</h3>
+                    <span class="badge confirmed">Confirmed</span>
+                </div>
+                <p><strong>Date:</strong> Today at 2:00 PM</p>
+                <p><strong>Service:</strong> Strength Training</p>
+                <p><strong>Price:</strong> $75</p>
+                <div class="btn-group">
+                    <button class="btn btn-secondary">Reschedule</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completed Tab -->
+        <div id="completed" class="tab-content">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <h3>Emma Davis</h3>
+                    <span class="badge completed">Completed</span>
+                </div>
+                <p><strong>Date:</strong> Feb 14, 2026 at 6:00 PM</p>
+                <p><strong>Service:</strong> Weight Loss Program</p>
+                <p><strong>Price:</strong> $75</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 FitMatch. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
