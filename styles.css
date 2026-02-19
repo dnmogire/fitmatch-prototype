@@ -6,89 +6,126 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #111;
+    background-color: #f9f9fb; /* Matching beige background */
 }
 
-/* Navigation */
-.navbar {
-    background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* Header - Matching Giselle's design */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    padding: 18px 40px;
+    background: #f9f9fb;
+    color: rgb(7, 6, 6);
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 24px;
-    font-weight: 700;
-    color: #3B82F6;
+    gap: 10px;
 }
 
 .logo img {
-    height: 40px;
+    height: 45px;
     width: auto;
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+.logo h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #4169E1;
+    font-weight: 600;
 }
 
-.nav-menu a {
+.logo a {
     text-decoration: none;
-    color: #666;
-    font-weight: 500;
-    transition: color 0.3s;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
-    color: #3B82F6;
+/* Navigation - Matching Giselle's style */
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
-/* Container */
-.container {
+.navigation a {
+    color: #111;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 2s;
+}
+
+.navigation a:hover {
+    color: #4169E1;
+}
+
+.navigation a.active {
+    color: #4169E1;
+}
+
+.browse-link {
+    color: #111;
+    font-weight: 600;
+}
+
+/* Sign Up Button - Matching Giselle's style */
+.signup-btn {
+    background: #c2d8f7;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 2s;
+}
+
+.signup-btn:hover {
+    background: #1e3a8a;
+}
+
+/* Profile Icon - Matching Giselle's style */
+.profile-icon img {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 2s;
+}
+
+.profile-icon img:hover {
+    border-color: #c2d8f7;
+}
+
+/* Main Content */
+.dashboard-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    min-height: calc(100vh - 150px);
 }
 
-/* Page Header */
-.page-header {
+/* Welcome Section */
+.welcome-section {
     margin-bottom: 40px;
 }
 
-.page-header h1 {
+.welcome-section h1 {
     font-size: 32px;
     color: #1a1a1a;
     margin-bottom: 8px;
 }
 
-.page-header p {
+.welcome-section p {
     color: #666;
     font-size: 16px;
 }
 
-/* Stats Section */
-.stats {
+/* Stats Grid */
+.stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
@@ -101,6 +138,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     text-align: center;
+    border: 1px solid #e5e7eb;
 }
 
 .stat-card h3 {
@@ -113,19 +151,20 @@ body {
 .stat-number {
     font-size: 36px;
     font-weight: 700;
-    color: #3B82F6;
+    color: #4169E1;
 }
 
-/* Section */
-.section {
+/* Sessions Section */
+.sessions-section {
     background: white;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
 }
 
-.section h2 {
+.sessions-section h2 {
     font-size: 20px;
     margin-bottom: 20px;
     color: #1a1a1a;
@@ -145,14 +184,14 @@ body {
     padding: 20px;
     background: #f9fafb;
     border-radius: 8px;
-    border-left: 4px solid #3B82F6;
+    border-left: 4px solid #4169E1;
 }
 
 .session-time {
     font-size: 18px;
     font-weight: 600;
     min-width: 80px;
-    color: #3B82F6;
+    color: #4169E1;
 }
 
 .session-info {
@@ -219,12 +258,12 @@ body {
 }
 
 .tab-btn:hover {
-    color: #3B82F6;
+    color: #4169E1;
 }
 
 .tab-btn.active {
-    color: #3B82F6;
-    border-bottom-color: #3B82F6;
+    color: #4169E1;
+    border-bottom-color: #4169E1;
 }
 
 .tab-content {
@@ -242,6 +281,7 @@ body {
     border-radius: 8px;
     border: 1px solid #e5e7eb;
     margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .booking-header {
@@ -270,6 +310,7 @@ body {
     border-radius: 8px;
     border: 1px solid #e5e7eb;
     margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .service-header {
@@ -296,7 +337,7 @@ body {
     margin-bottom: 16px;
 }
 
-/* Buttons */
+/* Buttons - Matching Giselle's style */
 .btn {
     padding: 10px 20px;
     border: none;
@@ -308,13 +349,13 @@ body {
 }
 
 .btn-primary {
-    background: #3B82F6;
+    background: #c2d8f7;
     color: white;
     margin-bottom: 20px;
 }
 
 .btn-primary:hover {
-    background: #2563EB;
+    background: #1e3a8a;
 }
 
 .btn-success {
@@ -358,6 +399,7 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin: 30px 0;
+    border: 1px solid #e5e7eb;
 }
 
 .form-group {
@@ -386,7 +428,7 @@ body {
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: #3B82F6;
+    border-color: #4169E1;
 }
 
 .form-row {
@@ -409,7 +451,7 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #3B82F6, #2563EB);
+    background: linear-gradient(135deg, #4169E1, #1e3a8a);
     color: white;
     display: flex;
     align-items: center;
@@ -440,7 +482,7 @@ body {
 .stat-item strong {
     display: block;
     font-size: 28px;
-    color: #3B82F6;
+    color: #4169E1;
     margin-bottom: 4px;
 }
 
@@ -486,21 +528,43 @@ body {
     font-size: 14px;
 }
 
+/* Section */
+.section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
 /* Footer */
 footer {
     background: #1a1a1a;
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: 60px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-menu {
+    header {
+        flex-direction: column;
         gap: 15px;
     }
 
-    .stats {
+    .navigation {
+        gap: 12px;
+    }
+
+    .stats-grid {
         grid-template-columns: 1fr;
     }
 
